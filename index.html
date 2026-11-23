@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Share projects, articles, and learning modules.">
+    <title>ShareShelf — Community Library</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="#" aria-label="ShareShelf home">
+            <span class="brand-icon" aria-hidden="true">S</span>
+            <span>ShareShelf</span>
+        </a>
+        <a class="header-link" href="#library">Browse library <span aria-hidden="true">↓</span></a>
+    </header>
+
+    <main>
+        <section class="hero">
+            <p class="eyebrow">A COMMUNITY LIBRARY</p>
+            <h1>Good work deserves<br>to be <span>shared.</span></h1>
+            <p class="hero-copy">Save and discover projects, articles, and learning modules from people like you.</p>
+            <a class="hero-link" href="#add-file">Share your first file <span aria-hidden="true">↘</span></a>
+            <div class="hero-decoration" aria-hidden="true">
+                <span class="decoration-card card-one">✳</span>
+                <span class="decoration-card card-two">↗</span>
+                <span class="decoration-card card-three">Aa</span>
+            </div>
+        </section>
+
+        <aside class="demo-notice">
+            <span class="notice-icon" aria-hidden="true">i</span>
+            <p><strong>Browser preview:</strong> files added here are only available in this tab. They are not uploaded or shared online yet.</p>
+        </aside>
+
+        <div class="content-grid">
+            <section class="upload-panel" id="add-file" aria-labelledby="upload-heading">
+                <div class="panel-heading">
+                    <div>
+                        <p class="eyebrow">CONTRIBUTE</p>
+                        <h2 id="upload-heading">Add a file</h2>
+                    </div>
+                    <span class="step-number">01</span>
+                </div>
+
+                <form id="upload-form">
+                    <div class="field">
+                        <label for="uploader">Your name</label>
+                        <input id="uploader" name="uploader" type="text" maxlength="60" placeholder="How should we credit you?" autocomplete="name" required>
+                    </div>
+
+                    <div class="field-row">
+                        <div class="field">
+                            <label for="category">Category</label>
+                            <select id="category" name="category" required>
+                                <option value="Project">Project</option>
+                                <option value="Article">Article</option>
+                                <option value="Learning module">Learning module</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label for="title">Title</label>
+                            <input id="title" name="title" type="text" maxlength="100" placeholder="Name your file" required>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label for="file">Choose a file</label>
+                        <input id="file" name="file" type="file" required>
+                        <span class="field-hint">Any file type is okay for this preview.</span>
+                    </div>
+
+                    <button class="submit-button" type="submit">Add to library <span aria-hidden="true">↗</span></button>
+                    <p id="form-message" class="form-message" role="status" aria-live="polite"></p>
+                </form>
+            </section>
+
+            <section class="library-panel" id="library" aria-labelledby="library-heading">
+                <div class="library-heading">
+                    <div>
+                        <p class="eyebrow">FIND SOMETHING GOOD</p>
+                        <h2 id="library-heading">The library</h2>
+                    </div>
+                    <span id="item-count" class="item-count">0 files</span>
+                </div>
+
+                <div id="library-content">
+                    <div class="empty-state">
+                        <span class="empty-icon" aria-hidden="true">↗</span>
+                        <h3>It’s a little quiet in here.</h3>
+                        <p>Add a file to start your library. Items will be grouped in folders by uploader.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <a class="brand footer-brand" href="#">
+            <span class="brand-icon" aria-hidden="true">S</span>
+            <span>ShareShelf</span>
+        </a>
+        <p>A little more sharing, a lot more learning.</p>
+    </footer>
+</body>
+</html>
